@@ -1,0 +1,383 @@
+/* Reset & Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #f7f4eb; /* Premium bisque/cream tone matching original peach-orange mood */
+    color: #1c1917;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 1. Showcase Header */
+.showcase-header {
+    background: linear-gradient(135deg, #1e1b4b 0%, #311042 100%);
+    color: #ffffff;
+    padding: 20px 40px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.showcase-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.showcase-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.showcase-back-btn {
+    display: inline-block;
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.showcase-back-btn:hover {
+    color: #7dd3fc;
+    transform: translateX(-3px);
+}
+
+.showcase-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #38bdf8 0%, #c084fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.showcase-desc {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.showcase-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.showcase-tag {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.showcase-link.github {
+    background: #38bdf8;
+    color: #0f172a;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+}
+
+.showcase-link.github:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.5);
+    background: #7dd3fc;
+}
+
+/* 2. Main Page Layout (Strictly preserving original CSS Grid spans) */
+.main-grid-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 25px;
+    column-gap: 30px;
+    flex: 1;
+}
+
+/* Heading: Header Block (spanning 1 to 5) */
+.editorial-header {
+    grid-column: 1 / span 5;
+    background-color: #22c55e; /* Original bright green heading box mapped to clean forest emerald */
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.2);
+}
+
+.logo-area {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 8px white;
+}
+
+.portal-main-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Left Box: Main Article Area (spanning 1 to 3) */
+.main-article {
+    grid-column: 1 / span 3;
+    background: white;
+    border: 1px solid #e7e5e4;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 10px 25px rgba(28, 25, 23, 0.02);
+}
+
+.article-badge {
+    background-color: #ffedd5;
+    color: #ea580c;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.article-title {
+    font-family: 'Lora', serif;
+    font-size: 2.1rem;
+    line-height: 1.3;
+    font-weight: 700;
+    color: #1c1917;
+    margin-bottom: 25px;
+}
+
+/* Author info card */
+.author-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e7e5e4;
+    border-bottom: 1px solid #e7e5e4;
+    padding: 15px 0;
+    margin-bottom: 30px;
+}
+
+.author-avatar {
+    font-size: 1.5rem;
+    background: #f5f5f4;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.author-meta {
+    flex: 1;
+    margin-left: 12px;
+}
+
+.author-name {
+    display: block;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.article-date {
+    font-size: 0.8rem;
+    color: #78716c;
+}
+
+.share-buttons {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #0284c7;
+    cursor: pointer;
+}
+
+/* Big Image Banner */
+.article-banner {
+    background: linear-gradient(135deg, #a8a29e 0%, #78716c 100%);
+    border-radius: 12px;
+    height: 250px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.banner-gradient {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.8) 100%);
+}
+
+.banner-caption {
+    position: relative;
+    z-index: 2;
+    color: #e7e5e4;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+/* Article Body content (Editorial serif look) */
+.article-body {
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #292524;
+}
+
+.lead-paragraph {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.article-body p {
+    margin-bottom: 20px;
+}
+
+.article-body blockquote {
+    border-left: 4px solid #ea580c;
+    padding-left: 20px;
+    font-style: italic;
+    font-size: 1.25rem;
+    color: #44403c;
+    margin: 30px 0;
+    line-height: 1.5;
+}
+
+/* Right Box: Related News Panel (spanning 4 to 2) */
+.related-panel {
+    grid-column: 4 / span 2;
+    background: white;
+    border: 1px solid #e7e5e4;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(28, 25, 23, 0.02);
+}
+
+.related-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border-bottom: 2px solid #e7e5e4;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.related-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.related-card {
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #f5f5f4;
+    padding-bottom: 15px;
+    transition: transform 0.2s ease;
+}
+
+.related-card:last-child {
+    border-bottom: none;
+}
+
+.related-card:hover {
+    transform: translateY(-2px);
+}
+
+.related-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #22c55e;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.related-card h4 {
+    font-family: 'Lora', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1c1917;
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+.related-card:hover h4 {
+    color: #ea580c;
+}
+
+.related-card p {
+    font-size: 0.85rem;
+    color: #78716c;
+    line-height: 1.4;
+}
+
+/* Footer: spans 1 to 5 */
+.editorial-footer {
+    grid-column: 1 / span 5;
+    background-color: #0c0a09;
+    color: #a8a29e;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive Grid overrides */
+@media (max-width: 900px) {
+    .main-grid-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .editorial-header, .main-article, .related-panel, .editorial-footer {
+        grid-column: 1 / span 1 !important;
+        width: 100%;
+    }
+    
+    .article-banner {
+        height: 180px;
+    }
+}
