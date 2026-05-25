@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Directory Data Table</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Project Showcase Header -->
+    <header class="showcase-header">
+        <div class="showcase-container">
+            <div class="showcase-info">
+                <a href="../../html-projects.html" class="showcase-back-btn">← Back to Portfolio</a>
+                <h1 class="showcase-title">Student Directory Data Table</h1>
+                <p class="showcase-desc">A highly polished, responsive data table presenting structured student information. Features real-time client-side search filtration and elegant tag badges.</p>
+                <div class="showcase-tags">
+                    <span class="showcase-tag">HTML5</span>
+                    <span class="showcase-tag">CSS3</span>
+                    <span class="showcase-tag">Client-side Filter</span>
+                    <span class="showcase-tag">Responsive Table</span>
+                </div>
+            </div>
+            <div class="showcase-meta">
+                <a href="https://github.com/MayankFullStackDev/HTML_projects" target="_blank" class="showcase-link github">💻 View Code on GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Directory Card Header -->
+        <div class="directory-card">
+            <div class="directory-header">
+                <div>
+                    <h2>Student Records Directory</h2>
+                    <p>Search, filter, and view structured student details, skill assessments, and local addresses.</p>
+                </div>
+                <!-- Real-time Search Box -->
+                <div class="search-box-container">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="directorySearch" placeholder="Search by name, ID, or location..." onkeyup="filterDirectoryTable()" />
+                </div>
+            </div>
+
+            <!-- Table Wrapper for responsiveness -->
+            <div class="table-wrapper">
+                <table class="student-table" id="studentTable">
+                    <thead>
+                        <tr>
+                            <th rowspan="2" class="bordered">Student ID</th>
+                            <th rowspan="2" class="bordered">Student Name</th>
+                            <th rowspan="2" class="bordered">Age</th>
+                            <th rowspan="2" class="bordered">Address</th>
+                            <th colspan="3" class="header-group bordered">Assessments & Skills</th>
+                        </tr>
+                        <tr>
+                            <th class="bordered">Programming</th>
+                            <th class="bordered">Communication</th>
+                            <th class="bordered">Experience</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="bold-id bordered">101</td>
+                            <td class="bold-name bordered">Ayush</td>
+                            <td class="bordered">22</td>
+                            <td class="bordered">Katol</td>
+                            <td class="bordered"><span class="badge yes">✔ Yes</span></td>
+                            <td class="bordered"><span class="badge yes">✔ Yes</span></td>
+                            <td class="bordered"><span class="badge yes">✔ Yes</span></td>
+                        </tr>
+                        <tr>
+                            <td class="bold-id bordered">102</td>
+                            <td class="bold-name bordered">Pawan</td>
+                            <td class="bordered">22</td>
+                            <td class="bordered">Khaparkheda</td>
+                            <td class="bordered"><span class="badge yes">✔ Yes</span></td>
+                            <td class="bordered"><span class="badge yes">✔ Yes</span></td>
+                            <td class="bordered"><span class="badge yes">✔ Yes</span></td>
+                        </tr>
+                        <tr>
+                            <td class="bold-id bordered">103</td>
+                            <td class="bold-name bordered">Aryan</td>
+                            <td class="bordered">22</td>
+                            <td class="bordered">Nagpur</td>
+                            <td class="bordered"><span class="badge yes">✔ Yes</span></td>
+                            <td class="bordered"><span class="badge yes">✔ Yes</span></td>
+                            <td class="bordered"><span class="badge yes">✔ Yes</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Empty State -->
+            <div class="empty-state hidden" id="emptyState">
+                <span class="empty-icon">📭</span>
+                <h4>No Student Found</h4>
+                <p>Try refining your search keyword to match names, IDs, or locations.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterDirectoryTable() {
+            const input = document.getElementById('directorySearch');
+            const filter = input.value.toLowerCase();
+            const table = document.getElementById('studentTable');
+            const trs = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+            const emptyState = document.getElementById('emptyState');
+            let foundCount = 0;
+
+            for (let i = 0; i < trs.length; i++) {
+                const tds = trs[i].getElementsByTagName('td');
+                let rowText = '';
+                for (let j = 0; j < tds.length; j++) {
+                    rowText += tds[j].textContent + ' ';
+                }
+                
+                if (rowText.toLowerCase().includes(filter)) {
+                    trs[i].style.display = '';
+                    foundCount++;
+                } else {
+                    trs[i].style.display = 'none';
+                }
+            }
+
+            if (foundCount === 0) {
+                table.classList.add('hidden');
+                emptyState.classList.remove('hidden');
+            } else {
+                table.classList.remove('hidden');
+                emptyState.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>

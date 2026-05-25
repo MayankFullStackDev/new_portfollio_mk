@@ -1,0 +1,236 @@
+/* Reset & Basic Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #e2e8f0;
+    color: #0f172a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 1. Showcase Header */
+.showcase-header {
+    background: linear-gradient(135deg, #1e1b4b 0%, #311042 100%);
+    color: #ffffff;
+    padding: 20px 40px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.showcase-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.showcase-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.showcase-back-btn {
+    display: inline-block;
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.showcase-back-btn:hover {
+    color: #7dd3fc;
+    transform: translateX(-3px);
+}
+
+.showcase-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #38bdf8 0%, #c084fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.showcase-desc {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.showcase-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.showcase-tag {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.showcase-link.github {
+    background: #38bdf8;
+    color: #0f172a;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+}
+
+.showcase-link.github:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.5);
+    background: #7dd3fc;
+}
+
+/* 2. Main Page Layout */
+.main-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* Calculator Card (proportional dimensions matching original 500x600px size) */
+.calculator-card {
+    width: 100%;
+    max-width: 460px;
+    background-color: #605e5e; /* Original dark grey table body background */
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    border: 1px solid #787777;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Digital Output Screen (first-row) */
+.calculator-screen {
+    background-color: #1e293b; /* sleek terminal black screen background */
+    border-radius: 12px;
+    padding: 20px;
+    text-align: right;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.5);
+    border: 1px solid #475569;
+}
+
+.screen-history {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.95rem;
+    color: #64748b;
+    min-height: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.screen-output {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #38bdf8; /* glowing sky blue text */
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* Buttons Grid Layout */
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* Base button styles */
+.btn {
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    height: 70px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Digits Buttons: light-grey placeholders matching original */
+.digit-btn {
+    background-color: #b0acb0; /* Original light grey cell color */
+    color: #1c1917;
+    border-bottom: 3px solid #8e8a8e;
+}
+
+.digit-btn:hover {
+    background-color: #c4bfc4;
+}
+
+/* Action Buttons (AC, +/-, %): dark grey cell background */
+.action-btn {
+    background-color: #787777; /* Original dark grey cell color */
+    color: #ffffff;
+    border-bottom: 3px solid #5a5959;
+}
+
+.action-btn:hover {
+    background-color: #8c8b8b;
+}
+
+/* Operator Buttons: yellow-green matching original */
+.operator-btn {
+    background-color: #9acd32; /* Original yellow-green cell color */
+    color: #1a2e05;
+    border-bottom: 3px solid #7cb922;
+}
+
+.operator-btn:hover {
+    background-color: #a8db42;
+    box-shadow: 0 0 10px rgba(154, 205, 50, 0.3);
+}
+
+/* Equals Button */
+.equals-btn {
+    background-color: #9acd32;
+    color: #1a2e05;
+    border-bottom: 3px solid #7cb922;
+}
+
+.equals-btn:hover {
+    background-color: #a8db42;
+    box-shadow: 0 0 10px rgba(154, 205, 50, 0.5);
+}
+
+/* Zero button spanning two columns */
+.double-width {
+    grid-column: span 2;
+}
