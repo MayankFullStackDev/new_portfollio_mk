@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Projects Catalog - Mayank Kharbade</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .projects-grid {
+            max-width: 1200px;
+            margin: 0 auto 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+            border-color: #cbd5e1;
+        }
+
+        .project-image {
+            height: 200px;
+            background: #0f172a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-details h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 10px;
+        }
+
+        .project-details p {
+            font-size: 0.95rem;
+            color: #64748b;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .project-tech {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        .tech-tag {
+            background-color: #f1f5f9;
+            color: #475569;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .project-link {
+            flex: 1;
+            padding: 10px 16px;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+        }
+
+        .project-link:hover {
+            background-color: #1d4ed8;
+            box-shadow: 0 8px 18px rgba(37, 99, 235, 0.35);
+        }
+
+        .project-link.code {
+            background-color: transparent;
+            color: #2563eb;
+            border: 1px solid #2563eb;
+            box-shadow: none;
+        }
+
+        .project-link.code:hover {
+            background-color: #eff6ff;
+        }
+
+        .button-container {
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .main-page-btn {
+            padding: 14px 30px;
+            background-color: #0f172a;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+        }
+
+        .main-page-btn:hover {
+            background-color: #1e293b;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>HTML Projects Portfolio</h1>
+        <p>A showcase of clean semantic markup, custom layouts, accessible tables, and forms designed by Mayank Kharbade.</p>
+    </header>
+
+    <div class="projects-grid">
+        <!-- Project 1: Front Page (MK Transport) -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="./projects/front-page-grid/preview.svg" alt="MK Transport Landing Page Preview" />
+            </div>
+            <div class="project-content">
+                <div class="project-details">
+                    <h3>MK Transport Landing Page</h3>
+                    <p>A marketing landing page for a logistics company, designed using grid templates, material cards, and clear typography structures.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS Grid</span>
+                        <span class="tech-tag">Flexbox</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/MayankFullStackDev/HTML_projects" target="_blank" class="project-link code">View Code</a>
+                    <a href="./projects/front-page-grid/index.html" class="project-link">Live Demo</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2: Layout (Creative Layout) -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="./projects/creative-layout/preview.svg" alt="Creative Dashboard Layout Preview" />
+            </div>
+            <div class="project-content">
+                <div class="project-details">
+                    <h3>Creative Layout Sandbox</h3>
+                    <p>A complex dashboard wireframe structure showcasing detailed vertical and horizontal nested Flexbox proportions (30%, 50%, 20%).</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">Flexbox Layout</span>
+                        <span class="tech-tag">Nested Blocks</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/MayankFullStackDev/HTML_projects" target="_blank" class="project-link code">View Code</a>
+                    <a href="./projects/creative-layout/index.html" class="project-link">Live Demo</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3: Student Data (Student Table) -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="./projects/student-table/preview.svg" alt="Student Records Directory Preview" />
+            </div>
+            <div class="project-content">
+                <div class="project-details">
+                    <h3>Student Directory Table</h3>
+                    <p>A crisp, responsive table listing detailed student indexes and communications profiles, equipped with a real-time JS query search.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML Table</span>
+                        <span class="tech-tag">Responsive Wrapper</span>
+                        <span class="tech-tag">Search Filter</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/MayankFullStackDev/HTML_projects" target="_blank" class="project-link code">View Code</a>
+                    <a href="./projects/student-table/index.html" class="project-link">Live Demo</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 4: Breaking News (Editorial Grid) -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="./projects/breaking-news-grid/preview.svg" alt="Editorial News Grid Preview" />
+            </div>
+            <div class="project-content">
+                <div class="project-details">
+                    <h3>Editorial News Grid</h3>
+                    <p>An elegant news article layout designed with CSS grid columns, featuring hero panels, typography structures, and relative streams.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">CSS Grid Areas</span>
+                        <span class="tech-tag">Lora Typography</span>
+                        <span class="tech-tag">Layout Spanning</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/MayankFullStackDev/HTML_projects" target="_blank" class="project-link code">View Code</a>
+                    <a href="./projects/breaking-news-grid/index.html" class="project-link">Live Demo</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 5: Calculator (Calculator UI) -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="./projects/calculator-ui/preview.svg" alt="JavaScript Calculator Preview" />
+            </div>
+            <div class="project-content">
+                <div class="project-details">
+                    <h3>JavaScript Calculator</h3>
+                    <p>A fully functional digital calculator, styled in a sleek glassmorphic keys layout, supporting keyboard key bindings.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Arithmetic JS</span>
+                        <span class="tech-tag">CSS Grid Keys</span>
+                        <span class="tech-tag">Keyboard Support</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/MayankFullStackDev/HTML_projects" target="_blank" class="project-link code">View Code</a>
+                    <a href="./projects/calculator-ui/index.html" class="project-link">Live Demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <a href="../index.html" class="main-page-btn">← Back to Main Portfolio</a>
+    </div>
+</body>
+</html>

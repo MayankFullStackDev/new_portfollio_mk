@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-like Mood Tracker & Analyzer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Project Showcase Header -->
+    <header class="showcase-header">
+        <div class="showcase-container">
+            <div class="showcase-info">
+                <a href="../../javascript.html" class="showcase-back-btn">← Back to Portfolio</a>
+                <h1 class="showcase-title">AI-like Mood Tracker</h1>
+                <p class="showcase-desc">A highly engaging mood analyzing widget. Features premium hover-animated quick buttons, a custom text analyzer, and playful easter egg states.</p>
+                <div class="showcase-tags">
+                    <span class="showcase-tag">HTML5</span>
+                    <span class="showcase-tag">CSS Flexbox</span>
+                    <span class="showcase-tag">Interactive JS</span>
+                    <span class="showcase-tag">User Experience</span>
+                </div>
+            </div>
+            <div class="showcase-meta">
+                <a href="https://github.com/MayankFullStackDev/javascript/blob/main/java-script/SelfWork/felling.html" target="_blank" class="showcase-link github">💻 View Code on GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Mood Analyzer Card -->
+        <div class="mood-card">
+            <h2>How Are You Feeling Today?</h2>
+            <p class="mood-subtitle">Type your mood below or select one of the quick emotions to see the analyzer's reflection.</p>
+            
+            <!-- Custom input with icon -->
+            <div class="input-area">
+                <input type="text" id="moodInput" placeholder="Try 'happy', 'sad', 'tired', 'gayu' or 'diksha'..." />
+                <button class="check-btn" onclick="analyzeWrittenMood()">Analyze Mood 🧠</button>
+            </div>
+
+            <!-- Quick Emoji Buttons -->
+            <div class="quick-emojis">
+                <button class="emoji-btn" onclick="selectMood('happy')" title="Happy">😊 Happy</button>
+                <button class="emoji-btn" onclick="selectMood('sad')" title="Sad">😢 Sad</button>
+                <button class="emoji-btn" onclick="selectMood('tired')" title="Tired">🥱 Tired</button>
+                <button class="emoji-btn" onclick="selectMood('gayu')" title="Gayu">🐮 Gayu</button>
+                <button class="emoji-btn" onclick="selectMood('diksha')" title="Diksha">✨ Diksha</button>
+            </div>
+
+            <!-- Dynamic Result Card -->
+            <div class="result-area" id="resultCard">
+                <div class="emoji-display-container">
+                    <img id="moodEmoji" src="https://img.freepik.com/premium-vector/slightly-smiling-face-with-sunglasses-large-size-yellow-emoji-smile_599062-10637.jpg?semt=ais_hybrid&w=740" alt="Slightly Smiling Emoji Face" />
+                </div>
+                <div class="result-text">
+                    <h3 id="moodHeading">Ready to Analyze</h3>
+                    <p id="moodQuote">Enter or click a mood above to unlock a personalized quote, advice, and customized emoji representation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

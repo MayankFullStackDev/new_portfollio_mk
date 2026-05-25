@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functional JavaScript Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Project Showcase Header -->
+    <header class="showcase-header">
+        <div class="showcase-container">
+            <div class="showcase-info">
+                <a href="../../html-projects.html" class="showcase-back-btn">← Back to Portfolio</a>
+                <h1 class="showcase-title">JavaScript Calculator</h1>
+                <p class="showcase-desc">A fully functional digital calculator, styled in a sleek glassmorphic container. Employs clean JavaScript logic to perform real arithmetic with keyboard support.</p>
+                <div class="showcase-tags">
+                    <span class="showcase-tag">HTML5</span>
+                    <span class="showcase-tag">CSS Flexbox</span>
+                    <span class="showcase-tag">Arithmetic Logic</span>
+                    <span class="showcase-tag">Keyboard Input</span>
+                </div>
+            </div>
+            <div class="showcase-meta">
+                <a href="https://github.com/MayankFullStackDev/HTML_projects" target="_blank" class="showcase-link github">💻 View Code on GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Calculator Wrapper (matching original table structure layout in grid) -->
+        <div class="calculator-card">
+            <!-- Screen (row one) -->
+            <div class="calculator-screen">
+                <div class="screen-history" id="calcHistory"></div>
+                <div class="screen-output" id="calcOutput">0</div>
+            </div>
+
+            <!-- Buttons Grid (replacing the table structure beautifully) -->
+            <div class="calculator-buttons">
+                <!-- Row 2 -->
+                <button class="btn action-btn" onclick="clearCalculator()">AC</button>
+                <button class="btn action-btn" onclick="toggleSign()">+/-</button>
+                <button class="btn action-btn" onclick="appendOperator('%')">%</button>
+                <button class="btn operator-btn" onclick="appendOperator('/')">➗</button>
+
+                <!-- Row 3 -->
+                <button class="btn digit-btn" onclick="appendDigit('7')">7</button>
+                <button class="btn digit-btn" onclick="appendDigit('8')">8</button>
+                <button class="btn digit-btn" onclick="appendDigit('9')">9</button>
+                <button class="btn operator-btn" onclick="appendOperator('*')">×</button>
+
+                <!-- Row 4 -->
+                <button class="btn digit-btn" onclick="appendDigit('4')">4</button>
+                <button class="btn digit-btn" onclick="appendDigit('5')">5</button>
+                <button class="btn digit-btn" onclick="appendDigit('6')">6</button>
+                <button class="btn operator-btn" onclick="appendOperator('-')">-</button>
+
+                <!-- Row 5 -->
+                <button class="btn digit-btn" onclick="appendDigit('1')">1</button>
+                <button class="btn digit-btn" onclick="appendDigit('2')">2</button>
+                <button class="btn digit-btn" onclick="appendDigit('3')">3</button>
+                <button class="btn operator-btn" onclick="appendOperator('+')">+</button>
+
+                <!-- Row 7 (Row 6 blank original table skipped) -->
+                <button class="btn digit-btn double-width" onclick="appendDigit('0')">0</button>
+                <button class="btn digit-btn" onclick="appendDecimal()">.</button>
+                <button class="btn equals-btn" onclick="evaluateExpression()">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
