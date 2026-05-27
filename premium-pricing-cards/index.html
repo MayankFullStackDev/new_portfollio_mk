@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Pricing Cards Mockup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Project Showcase Header -->
+    <header class="showcase-header">
+        <div class="showcase-container">
+            <div class="showcase-info">
+                <a href="../../css-projects.html" class="showcase-back-btn">← Back to Portfolio</a>
+                <h1 class="showcase-title">Premium Pricing Cards</h1>
+                <p class="showcase-desc">A highly polished pricing table layout featuring glassmorphic details, interactive hover scales, visual hierarchy triggers, and a functional monthly/yearly billing toggle.</p>
+                <div class="showcase-tags">
+                    <span class="showcase-tag">HTML5</span>
+                    <span class="showcase-tag">CSS Flexbox</span>
+                    <span class="showcase-tag">UI/UX Design</span>
+                    <span class="showcase-tag">Interactive JS</span>
+                </div>
+            </div>
+            <div class="showcase-meta">
+                <a href="https://github.com/MayankFullStackDev/HTML_projects" target="_blank" class="showcase-link github">💻 View Code on GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Brand Header Section -->
+        <header class="page-header">
+            <h2>Designed for Business Teams Like Yours</h2>
+            <p>Here at Flowbite, we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+            
+            <!-- Dynamic Billing Toggle -->
+            <div class="billing-toggle-container">
+                <span class="toggle-label active" id="monthlyLabel">Monthly</span>
+                <label class="switch">
+                    <input type="checkbox" id="billingToggle">
+                    <span class="slider round"></span>
+                </label>
+                <span class="toggle-label" id="yearlyLabel">Yearly <span class="discount-badge">Save 20%</span></span>
+            </div>
+        </header>
+
+        <!-- Pricing Cards Box -->
+        <div class="pricing-grid">
+            <!-- Tier 1: Starter -->
+            <div class="pricing-card">
+                <h1 class="tier-title">Starter</h1>
+                <p class="tier-desc">Best option for personal use & for your next hobby project.</p>
+                <div class="price-container">
+                    <span class="currency">$</span>
+                    <span class="price" id="starterPrice">29</span>
+                    <span class="period">/mo</span>
+                </div>
+                <ul class="feature-list">
+                    <li><span class="check">✔</span> Individual configuration</li>
+                    <li><span class="check">✔</span> No setup or hidden fees</li>
+                    <li><span class="check">✔</span> Team size: <b>1 developer</b></li>
+                    <li><span class="check">✔</span> Premium support: <b>6 months</b></li>
+                    <li><span class="check">✔</span> Free updates: <b>6 months</b></li>
+                </ul>
+                <button class="pricing-btn">Get Started</button>
+            </div>
+
+            <!-- Tier 2: Company (Most Popular/Best Value Card) -->
+            <div class="pricing-card popular">
+                <span class="popular-badge">Most Popular</span>
+                <h1 class="tier-title">Company</h1>
+                <p class="tier-desc">Relevant for multiple users, extended & premium support.</p>
+                <div class="price-container">
+                    <span class="currency">$</span>
+                    <span class="price" id="companyPrice">99</span>
+                    <span class="period">/mo</span>
+                </div>
+                <ul class="feature-list">
+                    <li><span class="check">✔</span> Individual configuration</li>
+                    <li><span class="check">✔</span> No setup or hidden fees</li>
+                    <li><span class="check">✔</span> Team size: <b>10 developers</b></li>
+                    <li><span class="check">✔</span> Premium support: <b>24 months</b></li>
+                    <li><span class="check">✔</span> Free updates: <b>24 months</b></li>
+                </ul>
+                <button class="pricing-btn popular-btn">Get Started</button>
+            </div>
+
+            <!-- Tier 3: Enterprise -->
+            <div class="pricing-card">
+                <h1 class="tier-title">Enterprise</h1>
+                <p class="tier-desc">Best for large scale uses and extended redistribution rights.</p>
+                <div class="price-container">
+                    <span class="currency">$</span>
+                    <span class="price" id="enterprisePrice">499</span>
+                    <span class="period">/mo</span>
+                </div>
+                <ul class="feature-list">
+                    <li><span class="check">✔</span> Individual configuration</li>
+                    <li><span class="check">✔</span> No setup or hidden fees</li>
+                    <li><span class="check">✔</span> Team size: <b>100+ developers</b></li>
+                    <li><span class="check">✔</span> Premium support: <b>36 months</b></li>
+                    <li><span class="check">✔</span> Free updates: <b>36 months</b></li>
+                </ul>
+                <button class="pricing-btn">Get Started</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toggle Script -->
+    <script src="./script.js"></script>
+</body>
+</html>

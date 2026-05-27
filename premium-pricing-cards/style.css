@@ -1,0 +1,394 @@
+/* Reset & General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #f8fafc;
+    color: #0f172a;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 1. Showcase Header */
+.showcase-header {
+    background: linear-gradient(135deg, #1e1b4b 0%, #311042 100%);
+    color: #ffffff;
+    padding: 20px 40px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.showcase-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.showcase-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.showcase-back-btn {
+    display: inline-block;
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.showcase-back-btn:hover {
+    color: #7dd3fc;
+    transform: translateX(-3px);
+}
+
+.showcase-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #38bdf8 0%, #c084fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.showcase-desc {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.showcase-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.showcase-tag {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.showcase-link.github {
+    background: #38bdf8;
+    color: #0f172a;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+}
+
+.showcase-link.github:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.5);
+    background: #7dd3fc;
+}
+
+/* 2. Main Page Layout */
+.main-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    color: #64748b;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+/* Dynamic Toggle Switch */
+.billing-toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.toggle-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #64748b;
+    transition: color 0.3s ease;
+}
+
+.toggle-label.active {
+    color: #1d4ed8;
+}
+
+.discount-badge {
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+/* Switch styling */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cbd5e1;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+input:checked + .slider {
+    background-color: #2563eb;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2563eb;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Pricing Grid Layout */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* Individual Pricing Cards */
+.pricing-card {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.02);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.06);
+    border-color: #cbd5e1;
+}
+
+/* Highlighted Popular Card */
+.pricing-card.popular {
+    border-color: #2563eb;
+    border-width: 2px;
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+}
+
+.pricing-card.popular:hover {
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2563eb;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+/* Tier Typography */
+.tier-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0f172a;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.tier-desc {
+    font-size: 0.95rem;
+    color: #64748b;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    min-height: 45px;
+}
+
+/* Pricing Display */
+.price-container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-bottom: 35px;
+}
+
+.currency {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0f172a;
+    align-self: flex-start;
+    margin-top: 5px;
+}
+
+.price {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -2px;
+    transition: transform 0.3s ease;
+}
+
+.period {
+    font-size: 1.1rem;
+    color: #64748b;
+    margin-left: 2px;
+}
+
+/* Features List */
+.feature-list {
+    list-style: none;
+    margin-bottom: 40px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 25px;
+}
+
+.feature-list li {
+    font-size: 0.95rem;
+    color: #334155;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.check {
+    color: #10b981;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* Action Buttons */
+.pricing-btn {
+    width: 100%;
+    height: 48px;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    background: transparent;
+    color: #1d4ed8;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pricing-btn:hover {
+    background-color: #2563eb;
+    color: white;
+    border-color: #2563eb;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.pricing-btn.popular-btn {
+    background-color: #2563eb;
+    color: white;
+    border-color: #2563eb;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.pricing-btn.popular-btn:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+}
+
+/* Responsive Overrides */
+@media (max-width: 480px) {
+    .page-header h2 {
+        font-size: 2rem;
+    }
+    
+    .price-container {
+        margin-bottom: 25px;
+    }
+    
+    .price {
+        font-size: 3rem;
+    }
+}

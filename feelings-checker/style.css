@@ -1,0 +1,284 @@
+/* Reset & Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #e0f7fa; /* Original aqua placeholder mapped to modern mint-cyan shade */
+    color: #0f172a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 1. Showcase Header */
+.showcase-header {
+    background: linear-gradient(135deg, #1e1b4b 0%, #311042 100%);
+    color: #ffffff;
+    padding: 20px 40px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.showcase-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.showcase-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.showcase-back-btn {
+    display: inline-block;
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.showcase-back-btn:hover {
+    color: #7dd3fc;
+    transform: translateX(-3px);
+}
+
+.showcase-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #38bdf8 0%, #c084fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.showcase-desc {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.showcase-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.showcase-tag {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.showcase-link.github {
+    background: #38bdf8;
+    color: #0f172a;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+}
+
+.showcase-link.github:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.5);
+    background: #7dd3fc;
+}
+
+/* 2. Main Page Layout */
+.main-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mood Analyzer Card */
+.mood-card {
+    background: white;
+    border: 1px solid #b2ebf2;
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 20px 40px rgba(0, 150, 136, 0.08);
+}
+
+.mood-card h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color: #004d40;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+.mood-subtitle {
+    font-size: 1rem;
+    color: #00796b;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Input Area styling */
+.input-area {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+#moodInput {
+    flex: 1;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border-radius: 12px;
+    border: 1px solid #b2ebf2;
+    background-color: #f5fdfd;
+    outline: none;
+    color: #004d40;
+    transition: all 0.3s ease;
+}
+
+#moodInput:focus {
+    border-color: #009688;
+    background-color: white;
+    box-shadow: 0 0 0 4px rgba(0, 150, 136, 0.1);
+}
+
+.check-btn {
+    padding: 0 24px;
+    background-color: #009688;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 150, 136, 0.2);
+    transition: all 0.3s ease;
+}
+
+.check-btn:hover {
+    background-color: #00796b;
+    box-shadow: 0 8px 20px rgba(0, 150, 136, 0.3);
+    transform: translateY(-1px);
+}
+
+/* Quick Emojis select row */
+.quick-emojis {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.emoji-btn {
+    flex: 1;
+    min-width: 90px;
+    padding: 10px 15px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    background-color: #f5fdfd;
+    border: 1px solid #b2ebf2;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #00796b;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.emoji-btn:hover {
+    background-color: #009688;
+    color: white;
+    border-color: #009688;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 150, 136, 0.25);
+}
+
+/* Dynamic Result Area card */
+.result-area {
+    background: #f0fdfa;
+    border: 1px dashed #99f6e4;
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    transition: all 0.3s ease;
+}
+
+.emoji-display-container {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#moodEmoji {
+    max-width: 100%;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.result-text {
+    flex: 1;
+}
+
+#moodHeading {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 5px;
+}
+
+#moodQuote {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    .input-area {
+        flex-direction: column;
+    }
+    
+    .check-btn {
+        height: 48px;
+    }
+    
+    .quick-emojis {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+    
+    .result-area {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+}
