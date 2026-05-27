@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaking News</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .main-container {
+            height: 100%;
+            width: 100%;
+            background-color: bisque;
+            grid-template-columns: repeat(5, 1fr);
+            display: grid;
+            row-gap: 1px;
+            column-gap: 6px;
+            padding: 2%;
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+
+        .heading {
+            height: 70px;
+            width: 100%;
+            grid-column: 1/ span 5;
+            background-color: rgb(45, 236, 45);
+            color: white;
+            text-align: center;
+
+        }
+
+        .left-box {
+            height: 640px;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            grid-column: 1/ span 3;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 20px;
+            text-align: justify;
+            
+        }
+
+        .right-box {
+            height: 640px;
+            width: 100%;
+            background-color: rgb(253, 251, 255);
+            grid-column: 4/ span 2;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 20px;
+        }
+
+        .footer {
+            height: 40px;
+            width: 100%;
+            background-color: black;
+            grid-column: 1/ span 5;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <!--heading-->
+        <div class="heading">
+            <h1><b>Breaking News</b></h1>
+        </div>
+        <!--left box-->
+        <div class="left-box">
+           <p>
+            <h2>Responsible AI cannot be an afterthought, needs to be part of DNA: Infosys CTO Rafee Tarafdar</h2><br />
+            Mohammed Rafee Tarafdar is CTO of Infosys, and is responsible for the technology vision and strategy at
+            the company. He founded the Strategic Technology Group, a global team of technology leaders, full stack
+            architects and power programmers working on complex digital, cloud and AI programmes for enterprise
+            clients of Infosys and Infosys platforms.<br /><br/>
+
+            A Mechanical Engineering graduate from Karnatak University, Rafee Tarafdar is passionate about social
+            impact and personally mentors the Tech For Good programme at Infosys.<br /><br/>
+
+            He spoke to indianexpress.com on how Tech for Good fits into the organisation’s goals and objectives, on
+            Responsible AI, and how AI could impact the common man. Edited excerpts:<br>
+            Mohammed Rafee Tarafdar: Tech for Good falls under Infosys’ ESG ambitions and goals. When we formulated and
+            published our ESG vision for 2030, there were multiple pillars and one of the pillars is using technology to
+            drive social good.<br/><br/>
+
+            As per our plans for Tech for Good for 2025, we had a goal to impact around 80 million lives. We have
+            achieved our goal. Now, we are trying to redefine our goals for 2030 and will publish it in the next few
+            months.<br/><br/>
+            for Good, for us, is a strategic area of focus and we believe that,  given all of the tech that we work
+            with clients globally and in India, we can use it to drive social impact and change. And for this, we have
+            identified three broad areas for impact: e-governance, healthcare, and education. We have, on average, 50
+            dedicated professionals who work solely on Tech for Good initiatives. We also bring in volunteers from other
+            teams for specific projects. I personally lead the initiative at an organisational level.<br/>
+           </p>
+        </div>
+        <!--right box-->
+        <div class="right-box">
+            <p>
+            <h1>Related News </h1> <br/>
+                <ul>
+                    <li>Infosys CTO Advocates for Embedding Responsible AI in Organizational DNA</li>
+                    <li>Infosys Focuses on Transparency, Fairness, and Security in AI Development</li>
+                    <li>Infosys Builds Specialized AI Models as Core Intellectual Property</li>
+                    <li>Infosys Launches Comprehensive AI Training Program for 300,000 Employees</li>
+                    <li>Responsible AI: Key to Sustainable Growth and Innovation, Says Infosys CTO</li>
+                </ul>
+           </p>
+        </div>
+        <!--footer-->
+        <div class="footer">
+            <p>
+                <h3>© 2025 News Company. All Rights Reserved.</h3>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

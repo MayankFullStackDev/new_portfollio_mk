@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enjoy Programming Trainers & Students Directory</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Project Showcase Header -->
+    <header class="showcase-header">
+        <div class="showcase-container">
+            <div class="showcase-info">
+                <a href="../../javascript.html" class="showcase-back-btn">← Back to Portfolio</a>
+                <h1 class="showcase-title">EP Trainer & Student Directory</h1>
+                <p class="showcase-desc">A highly interactive directory dashboard presenting the team and graduates of Enjoy Programming. Features instant client-side filtering, active item select highlighting, and rich biography layouts.</p>
+                <div class="showcase-tags">
+                    <span class="showcase-tag">HTML5</span>
+                    <span class="showcase-tag">CSS Flexbox</span>
+                    <span class="showcase-tag">Real-Time Search</span>
+                    <span class="showcase-tag">Modern Dashboard</span>
+                </div>
+            </div>
+            <div class="showcase-meta">
+                <a href="https://github.com/MayankFullStackDev/javascript/tree/main/java-script/SelfWork/Ep-Trainer_student" target="_blank" class="showcase-link github">💻 View Code on GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation (original search + listing) -->
+        <aside class="directory-sidebar">
+            <div class="sidebar-header">
+                <img src="http://enjoyprograming.com/assets/logo/resized-logo.jpeg" alt="Enjoy Programming Logo" class="brand-logo" />
+                <h3>EP Directory</h3>
+            </div>
+            
+            <!-- Real-time search box -->
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="directorySearch" placeholder="Filter trainers/students..." onkeyup="filterDirectoryList()" />
+            </div>
+
+            <!-- Scrollable list of profiles -->
+            <div class="profile-list" id="profileList">
+                <div class="profile-list-item active" onclick="showProfile('enjoy')" data-name="enjoy programming">
+                    <span class="avatar">🎓</span>
+                    <div class="profile-brief">
+                        <span class="name">Enjoy Programming</span>
+                        <span class="role">IT Development Program</span>
+                    </div>
+                </div>
+                <div class="profile-list-item" onclick="showProfile('yogesh')" data-name="yogesh sir">
+                    <span class="avatar">👨‍💻</span>
+                    <div class="profile-brief">
+                        <span class="name">Yogesh Sir</span>
+                        <span class="role">Full-Stack Dev & Mentor</span>
+                    </div>
+                </div>
+                <div class="profile-list-item" onclick="showProfile('ruchi')" data-name="ruchi mam">
+                    <span class="avatar">👩‍🏫</span>
+                    <div class="profile-brief">
+                        <span class="name">Ruchi Mam</span>
+                        <span class="role">Communication Specialist</span>
+                    </div>
+                </div>
+                <div class="profile-list-item" onclick="showProfile('ayush')" data-name="ayush sir">
+                    <span class="avatar">👨‍💻</span>
+                    <div class="profile-brief">
+                        <span class="name">Ayush Sir</span>
+                        <span class="role">Technical Code Mentor</span>
+                    </div>
+                </div>
+                <div class="profile-list-item" onclick="showProfile('yash')" data-name="yash sir">
+                    <span class="avatar">💼</span>
+                    <div class="profile-brief">
+                        <span class="name">Yash Sir</span>
+                        <span class="role">Technical Trainer & Advisor</span>
+                    </div>
+                </div>
+                <div class="profile-list-item" onclick="showProfile('nishant')" data-name="nishant sir">
+                    <span class="avatar">📊</span>
+                    <div class="profile-brief">
+                        <span class="name">Nishant Sir</span>
+                        <span class="role">Project Manager</span>
+                    </div>
+                </div>
+                <div class="profile-list-item" onclick="showProfile('ayushn')" data-name="ayush n sir">
+                    <span class="avatar">🚀</span>
+                    <div class="profile-brief">
+                        <span class="name">Ayush N Sir</span>
+                        <span class="role">Associate Developer</span>
+                    </div>
+                </div>
+                <div class="profile-list-item" onclick="showProfile('ayushl')" data-name="ayush l sir">
+                    <span class="avatar">⚙️</span>
+                    <div class="profile-brief">
+                        <span class="name">Ayush L Sir</span>
+                        <span class="role">Associate Developer</span>
+                    </div>
+                </div>
+                <div class="profile-list-item" onclick="showProfile('divyanshu')" data-name="divyanshu sir">
+                    <span class="avatar">🛠️</span>
+                    <div class="profile-brief">
+                        <span class="name">Divyanshu Sir</span>
+                        <span class="role">Full Stack Mentor</span>
+                    </div>
+                </div>
+                <div class="profile-list-item" onclick="showProfile('shivani')" data-name="shivani mam">
+                    <span class="avatar">👩‍💻</span>
+                    <div class="profile-brief">
+                        <span class="name">Shivani Mam</span>
+                        <span class="role">Programming Coach</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Display Panel (original details view) -->
+        <main class="display-panel">
+            <div class="profile-card-container">
+                <div class="profile-cover"></div>
+                <div class="profile-card-body">
+                    <div class="profile-photo-container">
+                        <img id="profilePhoto" src="http://enjoyprograming.com/assets/logo/resized-logo.jpeg" alt="Profile Photo" />
+                    </div>
+                    <div class="profile-info-content">
+                        <h1 id="profileName">Enjoy Programming</h1>
+                        <span class="role-tag" id="profileRole">IT Skills Development Program</span>
+                        
+                        <p class="profile-bio" id="profileBio">
+                            IT Skills Development Program by Enjoy Programming.<br />
+                            Embrace innovation, enhance your skills, and excel in your career.<br />
+                            Join us to unlock your potential in the ever-evolving digital landscape.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

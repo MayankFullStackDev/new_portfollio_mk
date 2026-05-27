@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Space Encyclopedia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Project Showcase Header -->
+    <header class="showcase-header">
+        <div class="showcase-container">
+            <div class="showcase-info">
+                <a href="../../css-projects.html" class="showcase-back-btn">← Back to Portfolio</a>
+                <h1 class="showcase-title">Interactive Space Encyclopedia</h1>
+                <p class="showcase-desc">A gorgeous dark sci-fi planetary showcase featuring glowing CSS flexbox layouts, hover scale states, and a clean data-driven info panel.</p>
+                <div class="showcase-tags">
+                    <span class="showcase-tag">HTML5</span>
+                    <span class="showcase-tag">CSS Flexbox</span>
+                    <span class="showcase-tag">Sci-Fi UI</span>
+                    <span class="showcase-tag">Interactive JS</span>
+                </div>
+            </div>
+            <div class="showcase-meta">
+                <a href="https://github.com/MayankFullStackDev/HTML_projects" target="_blank" class="showcase-link github">💻 View Code on GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Planet Encyclopedia Container -->
+    <div class="encyclopedia-container">
+        <!-- Sun & Planet Flex Sidebar -->
+        <aside class="planet-sidebar">
+            <h2 class="galaxy-title">Solar System</h2>
+            <div class="planet-flex-list">
+                <div class="planet-item active" data-planet="sun" style="--glow-color: #f59e0b">☀️ Sun</div>
+                <div class="planet-item" data-planet="mercury" style="--glow-color: #94a3b8">🌑 Mercury</div>
+                <div class="planet-item" data-planet="venus" style="--glow-color: #f59e0b">🪐 Venus</div>
+                <div class="planet-item" data-planet="earth" style="--glow-color: #3b82f6">🌎 Earth</div>
+                <div class="planet-item" data-planet="mars" style="--glow-color: #ef4444">🔴 Mars</div>
+                <div class="planet-item" data-planet="jupiter" style="--glow-color: #f97316">🪐 Jupiter</div>
+                <div class="planet-item" data-planet="uranus" style="--glow-color: #06b6d4">💎 Uranus</div>
+                <div class="planet-item" data-planet="neptune" style="--glow-color: #3b82f6">🔵 Neptune</div>
+                <div class="planet-item" data-planet="pluto" style="--glow-color: #a8a29e">☄️ Pluto</div>
+            </div>
+        </aside>
+
+        <!-- Planet Info Panel -->
+        <main class="info-panel">
+            <div class="info-card" id="infoCard">
+                <div class="planet-visual-container">
+                    <div class="planet-sphere" id="planetSphere" style="background: radial-gradient(circle at 30% 30%, #f59e0b, #b45309)"></div>
+                </div>
+                <div class="planet-text">
+                    <h1 class="planet-name" id="planetName">Sun</h1>
+                    <span class="planet-type" id="planetType">Yellow Dwarf Star</span>
+                    
+                    <p class="planet-desc" id="planetDesc">The Sun is the star at the center of the Solar System. It is a nearly perfect ball of hot plasma, heated to incandescence by nuclear fusion reactions in its core, radiating the energy mainly as visible light, ultraviolet light, and infrared radiation.</p>
+                    
+                    <div class="planet-stats">
+                        <div class="stat-box">
+                            <span class="stat-val" id="planetDist">-</span>
+                            <span class="stat-lbl">Dist from Sun</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-val" id="planetTemp">15,000,000°C</span>
+                            <span class="stat-lbl">Core Temp</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-val" id="planetSize">1,392,700 km</span>
+                            <span class="stat-lbl">Diameter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

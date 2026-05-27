@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Projects Catalog - Mayank Kharbade</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .projects-grid {
+            max-width: 1200px;
+            margin: 0 auto 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+            border-color: #cbd5e1;
+        }
+
+        .project-image {
+            height: 200px;
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-bottom: 1px solid #e2e8f0;
+            position: relative;
+        }
+
+        .project-image::after {
+            content: "B5";
+            font-size: 5rem;
+            font-weight: 800;
+            color: rgba(255, 255, 255, 0.15);
+            position: absolute;
+            bottom: -10px;
+            right: 10px;
+        }
+
+        .project-icon {
+            font-size: 4rem;
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .project-content {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-details h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 10px;
+        }
+
+        .project-details p {
+            font-size: 0.95rem;
+            color: #64748b;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .project-tech {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        .tech-tag {
+            background-color: #f1f5f9;
+            color: #475569;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .project-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .project-extra-links {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .project-link {
+            padding: 10px 12px;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.15);
+        }
+
+        .project-link:hover {
+            background-color: #1d4ed8;
+            box-shadow: 0 8px 18px rgba(37, 99, 235, 0.3);
+        }
+
+        .project-link.code {
+            background-color: transparent;
+            color: #2563eb;
+            border: 1px solid #2563eb;
+            box-shadow: none;
+        }
+
+        .project-link.code:hover {
+            background-color: #eff6ff;
+        }
+
+        .project-link.extra {
+            flex: 1;
+            background-color: #475569;
+            box-shadow: 0 4px 10px rgba(71, 85, 105, 0.15);
+        }
+
+        .project-link.extra:hover {
+            background-color: #334155;
+            box-shadow: 0 8px 18px rgba(71, 85, 105, 0.3);
+        }
+
+        .project-link.figma {
+            background-color: #ec4899;
+            box-shadow: 0 4px 10px rgba(236, 72, 153, 0.15);
+        }
+
+        .project-link.figma:hover {
+            background-color: #db2777;
+            box-shadow: 0 8px 18px rgba(236, 72, 153, 0.3);
+        }
+
+        .button-container {
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .main-page-btn {
+            padding: 14px 30px;
+            background-color: #0f172a;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+        }
+
+        .main-page-btn:hover {
+            background-color: #1e293b;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.3);
+        }
+
+        .placeholder-image {
+            background: linear-gradient(135deg, #cbd5e1 0%, #94a3b8 100%);
+        }
+
+        .placeholder-image::after {
+            content: "⏱️";
+            font-size: 5rem;
+            opacity: 0.15;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Bootstrap Projects Portfolio</h1>
+        <p>Responsive, mobile-first layouts and components styled with modern custom configurations of Bootstrap 5.</p>
+    </header>
+
+    <div class="projects-grid">
+        <!-- Project 1: Sai Kripa Vermicompost -->
+        <div class="project-card">
+            <div class="project-image">
+                <span class="project-icon">🌱</span>
+            </div>
+            <div class="project-content">
+                <div class="project-details">
+                    <h3>Sai Kripa Vermicompost &amp; Earthworms</h3>
+                    <p>A beautiful portfolio website built with semantic Bootstrap 5, focusing on accessibility, SEO optimization, and agricultural solutions.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Bootstrap 5</span>
+                        <span class="tech-tag">Responsive UI</span>
+                        <span class="tech-tag">Utility Classes</span>
+                        <span class="tech-tag">SEO Meta</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="project-links">
+                        <a href="https://github.com/MayankFullStackDev/live-project-sai-vermicompost" target="_blank" class="project-link code">View Code</a>
+                        <a href="https://mayankfullstackdev.github.io/live-project-sai-vermicompost//" target="_blank" class="project-link">Live Demo</a>
+                    </div>
+                    <div class="project-extra-links">
+                        <a href="https://docs.google.com/document/d/1EONPNnV8yBN1QsM4xA9DvqEU4qx_SEQQUPCAoVgqFP4/edit?usp=sharing" target="_blank" class="project-link extra">Case Doc</a>
+                        <a href="https://docs.google.com/document/d/1V1axw2jxI5DBUGwRYsw6ZwHuREaZx-zUzPvJO3n1Et8/edit?usp=sharing" target="_blank" class="project-link extra">Test Cases</a>
+                        <a href="https://www.figma.com/design/3oY9qP9MkeMBzHManHvxxP/Untitled?t=C6NF4QptimObNagW-1" target="_blank" class="project-link figma">Figma</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Placeholder 2 -->
+        <div class="project-card">
+            <div class="project-image placeholder-image"></div>
+            <div class="project-content">
+                <div class="project-details">
+                    <h3>Commercial Dashboard</h3>
+                    <p>A premium metrics panel for supply chains, leveraging Bootstrap grid systems, table overlays, and chart extensions.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Bootstrap Grid</span>
+                        <span class="tech-tag">Tables</span>
+                        <span class="tech-tag">CSS Flex</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link code" onclick="alert('Project is coming soon!'); return false;">View Code</a>
+                    <a href="#" class="project-link" onclick="alert('Project is coming soon!'); return false;">Coming Soon</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Placeholder 3 -->
+        <div class="project-card">
+            <div class="project-image placeholder-image"></div>
+            <div class="project-content">
+                <div class="project-details">
+                    <h3>Enterprise Landing Page</h3>
+                    <p>Clean multi-page promotional architecture showcasing responsive hero section carousels, forms, and custom modal windows.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Bootstrap Carousel</span>
+                        <span class="tech-tag">Modals</span>
+                        <span class="tech-tag">Forms validation</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link code" onclick="alert('Project is coming soon!'); return false;">View Code</a>
+                    <a href="#" class="project-link" onclick="alert('Project is coming soon!'); return false;">Coming Soon</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <a href="../index.html" class="main-page-btn">← Back to Main Portfolio</a>
+    </div>
+</body>
+</html>

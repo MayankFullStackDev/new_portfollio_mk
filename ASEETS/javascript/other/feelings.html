@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+        }
+        .main{
+            height: 100%;
+            width: 100%;
+            background-color: aqua;
+        }
+        input{
+            height: 10%;
+            width: 50%;
+            margin-left: 200px;
+            font-size: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        button{
+            height: 10%;
+            width: 60%;
+            margin-left: 200px;
+        }
+        img{
+            height: 40%;
+            width: 30%;
+            margin-left: 200px;
+        }
+        h1{
+            margin-left: 200px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>check Mood</h1>
+        <input id="first" placeholder="Enter your Mood"><br><br>
+        <button onclick="CheckMood()">check mood</button><br><br>
+        <img id="myImage" src="https://img.freepik.com/premium-vector/slightly-smiling-face-with-sunglasses-large-size-yellow-emoji-smile_599062-10637.jpg?semt=ais_hybrid&w=740"/>
+    </div>
+
+
+    <script>
+        function CheckMood(){
+           let mood = document.getElementById('first').value;
+            if (mood == "sad"){
+                document.getElementById("myImage").src = "https://emojiisland.com/cdn/shop/products/Sad_Face_Emoji_large.png?v=1571606037"
+            }
+            else if (mood == "happy"){
+                document.getElementById("myImage").src ="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAxL3Jhd3BpeGVsb2ZmaWNlMThfYV9jdXRlXzNkX29mX2FfbGlrZV9lbW9qaV9pc29sYXRlZF9vbl9hX3doaXRlX18wMTI4NDc0Ny1hNTc3LTRmYmEtYjZjNS02YjBhMzc3MmEzOWIucG5n.png"
+            }
+            else if (mood == "tired"){
+                document.getElementById("myImage").src ="https://media.licdn.com/dms/image/v2/D5622AQGQHHnZ5R5OSA/feedshare-shrink_800/feedshare-shrink_800/0/1700679717292?e=2147483647&v=beta&t=Ea4I091OPPgHVMiJ9e_UFF8-1-0avzJN369IwDB05LY"
+            }
+            else if (mood == "gayu"){
+                document.getElementById("myImage").src ="https://cdn.britannica.com/55/174255-050-526314B6/brown-Guernsey-cow.jpg"
+            }
+            else if (mood == "diksha"){
+                document.getElementById("myImage").src ="https://i.pinimg.com/736x/a5/c1/12/a5c112e2c5b87756a588fbd14b2a4ad9.jpg"
+            }
+        }
+    </script>
+</body>
+</html>

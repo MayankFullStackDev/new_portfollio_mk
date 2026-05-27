@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Main Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1B56FD;
+      color: #fff;
+    }
+
+    .main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    input {
+      width: 90%;
+      max-width: 600px;
+      padding: 15px;
+      font-size: 18px;
+      border-radius: 10px;
+      border: none;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 12px 30px;
+      font-size: 20px;
+      border-radius: 10px;
+      background-color: #FFF085;
+      color: #000;
+      font-weight: bold;
+      margin-top: 20px;
+      cursor: pointer;
+      border: none;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .box {
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+    }
+
+    #myImage {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .info-text {
+      max-width: 600px;
+      text-align: left;
+    }
+
+    .info-text h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .info-text p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      .info-text {
+        text-align: center;
+      }
+
+      .info-text h1 {
+        font-size: 26px;
+      }
+
+      .info-text p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <input id="data" type="text" placeholder="Search Enjoy Programming's Trainers or Students" />
+    <br />
+    <button onclick="EpData()">KNOW</button>
+
+    <div class="box">
+      <img id="myImage" src="http://enjoyprograming.com/assets/logo/resized-logo.jpeg" alt="Default Image" />
+      <div class="info-text">
+        <h1 id="info">Enjoy Programming</h1>
+        <p id="infor">
+          IT Skills Development Program by Enjoy Programming.<br />
+          Embrace innovation, enhance your skills, and excel in your career.<br />
+          Join us to unlock your potential in the ever-evolving digital landscape.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function EpData() {
+      let serch = document.getElementById('data').value.trim();
+
+      if (serch.toLowerCase() === "yogesh sir") {
+        document.getElementById("myImage").src = "http://enjoyprograming.com/assets/images/trainers-mentors/yogesh-sir.jpeg";
+        document.getElementById("info").innerHTML = "Yogesh Sir";
+        document.getElementById("infor").innerHTML =
+          "A passionate educator and full-stack developer, Yogesh specializes in teaching programming, software development, and emerging technologies. With hands-on industry experience, he empowers students from Grade 7 to engineering levels through practical, project-based learning.";
+      }
+
+      else if (serch.toLowerCase() === "ruchi mam") {
+        document.getElementById("myImage").src = "http://enjoyprograming.com/assets/images/trainers-mentors/ruchi-mam.jpeg";
+        document.getElementById("info").innerHTML = "Ruchi Mam";
+        document.getElementById("infor").innerHTML =
+          "An expert in professional and interpersonal communication, specializing in training students and professionals to enhance clarity, confidence, and effectiveness in workplace communication.";
+      }
+
+      else if (serch.toLowerCase() === "ayush sir") {
+        document.getElementById("myImage").src = "http://enjoyprograming.com/assets/images/trainers-mentors/ayush-sir.jpeg";
+        document.getElementById("info").innerHTML = "Ayush Sir";
+        document.getElementById("infor").innerHTML =
+          "Dedicated to guiding students in real-world software development, Ayush brings strong expertise in coding, debugging, and mentoring projects with a focus on practical learning and innovation.";
+      }
+
+      else if (serch.toLowerCase() === "yash sir") {
+        document.getElementById("myImage").src = "http://enjoyprograming.com/assets/images/trainers-mentors/yash-sir.jpeg";
+        document.getElementById("info").innerHTML = "Yash Sir";
+        document.getElementById("infor").innerHTML =
+          "Yash is a skilled technical trainer who combines deep programming knowledge with hands-on mentoring. Alongside training, he has contributed strategically to Enjoy Programming’s growth through early investment and operational support, helping build a strong foundation for the future.";
+      }
+
+      else if (serch.toLowerCase() === "nishant sir") {
+        document.getElementById("myImage").src = "http://enjoyprograming.com/assets/images/trainers-mentors/nishant-sir.jpg";
+        document.getElementById("info").innerHTML = "Nishant Sir";
+        document.getElementById("infor").innerHTML =
+          "Nishant brings extensive experience in project delivery and quality assurance. As a Project Manager at Enjoy Programming, he ensures that student projects are aligned with industry standards while also mentoring them on practical software development and team collaboration.";
+      }
+
+      else if (serch.toLowerCase() === "ayush n sir") {
+        document.getElementById("myImage").src = "http://enjoyprograming.com/assets/images/trainers-mentors/ayush-new.jpeg";
+        document.getElementById("info").innerHTML = "Ayush N Sir";
+        document.getElementById("infor").innerHTML =
+          "Ayush is a highly motivated and passionate developer who thrives on solving real-world problems through code. At Enjoy Programming, he actively contributes to projects, continuously hones his skills, and inspires peers with his enthusiasm for technology and innovation.";
+      }
+
+      else if (serch.toLowerCase() === "ayush l sir") {
+        document.getElementById("myImage").src = "http://enjoyprograming.com/assets/images/trainers-mentors/ep-ayush-l.png";
+        document.getElementById("info").innerHTML = "Ayush L Sir";
+        document.getElementById("infor").innerHTML =
+          "Ayush is an enthusiastic and dedicated developer who is always eager to learn and build impactful tech solutions. At Enjoy Programming, he actively engages in coding projects and continually sharpens his skills through hands-on development and collaboration with peers.";
+      }
+
+      else if (serch.toLowerCase() === "divyanshu sir") {
+        document.getElementById("myImage").src = "http://enjoyprograming.com/assets/images/trainers-mentors/ep-divyanshu.jpeg";
+        document.getElementById("info").innerHTML = "Divyanshu Sir";
+        document.getElementById("infor").innerHTML =
+          "Divyanshu is a skilled full stack developer and dedicated project mentor at Enjoy Programming. He guides students through real-world project execution, helping them apply development best practices across both frontend and backend technologies.";
+      }
+
+      else if (serch.toLowerCase() === "shivani mam") {
+        document.getElementById("myImage").src = "http://enjoyprograming.com/assets/images/trainers-mentors/ep-shivani.jpeg";
+        document.getElementById("info").innerHTML = "Shivani Mam";
+        document.getElementById("infor").innerHTML =
+          "Shivani is a dedicated developer and mentor who guides students in both foundational and advanced programming concepts. At Enjoy Programming, she combines hands-on development experience with a passion for teaching, helping students build real-world skills and project confidence.";
+      }
+
+      else {
+        alert("Trainer not found. Please check the name again.");
+      }
+    }
+  </script>
+</body>
+
+</html>

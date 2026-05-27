@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Dashboard Layout Mockup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Project Showcase Header -->
+    <header class="showcase-header">
+        <div class="showcase-container">
+            <div class="showcase-info">
+                <a href="../../css-projects.html" class="showcase-back-btn">← Back to Portfolio</a>
+                <h1 class="showcase-title">Creative Dashboard Layout</h1>
+                <p class="showcase-desc">A professional dashboard mockup, demonstrating pixel-perfect nested Flexbox alignments, responsive grid flows, and modern UI sidebar styling.</p>
+                <div class="showcase-tags">
+                    <span class="showcase-tag">HTML5</span>
+                    <span class="showcase-tag">CSS Flexbox</span>
+                    <span class="showcase-tag">Nested Layouts</span>
+                    <span class="showcase-tag">Responsive Mockup</span>
+                </div>
+            </div>
+            <div class="showcase-meta">
+                <a href="https://github.com/MayankFullStackDev/HTML_projects" target="_blank" class="showcase-link github">💻 View Code on GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Sidebar (box1) -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">⚡</span> Dashboard
+            </div>
+            <nav class="sidebar-menu">
+                <a href="#" class="menu-item active">📊 Overview</a>
+                <a href="#" class="menu-item">📈 Analytics</a>
+                <a href="#" class="menu-item">👥 Users</a>
+                <a href="#" class="menu-item">⚙️ Settings</a>
+            </nav>
+            <div class="sidebar-user">
+                <div class="user-avatar">👤</div>
+                <div class="user-details">
+                    <span class="user-name">Mayank K.</span>
+                    <span class="user-role">Administrator</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area (box2) -->
+        <main class="main-content">
+            <!-- Row 1: Top Hero Widget (car1) -->
+            <header class="content-hero">
+                <div class="hero-left">
+                    <h2>Welcome back, Mayank!</h2>
+                    <p>Here's what's happening with your projects today.</p>
+                </div>
+                <!-- Small Inner Card (card1) -->
+                <div class="hero-card">
+                    <span class="card-label">Server Status</span>
+                    <span class="card-status status-online">● Online</span>
+                </div>
+            </header>
+
+            <!-- Row 2: Secondary Content Area (car2) -->
+            <section class="content-stats">
+                <div class="stat-card">
+                    <span class="stat-icon">🛒</span>
+                    <div class="stat-info">
+                        <h3>$24,500</h3>
+                        <p>Total Revenue</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">👥</span>
+                    <div class="stat-info">
+                        <h3>1,240</h3>
+                        <p>Active Clients</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">🚀</span>
+                    <div class="stat-info">
+                        <h3>99.9%</h3>
+                        <p>Uptime Rate</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Row 3: Bottom Widgets (car3) -->
+            <section class="content-charts">
+                <div class="chart-card">
+                    <h4>Monthly Growth Mockup</h4>
+                    <div class="mock-chart">
+                        <div class="chart-bar" style="height: 40%"></div>
+                        <div class="chart-bar" style="height: 60%"></div>
+                        <div class="chart-bar" style="height: 85%"></div>
+                        <div class="chart-bar" style="height: 50%"></div>
+                        <div class="chart-bar active" style="height: 95%"></div>
+                        <div class="chart-bar" style="height: 70%"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Right Sidebar Widgets (box3) -->
+        <aside class="right-panel">
+            <!-- Box 3 top widget (box33) -->
+            <div class="panel-section profile-sec">
+                <h4>System Logs</h4>
+                <div class="log-item">
+                    <span class="log-dot warning">●</span> Backup completed
+                </div>
+                <div class="log-item">
+                    <span class="log-dot success">●</span> Deployment successful
+                </div>
+            </div>
+            
+            <!-- Box 3 bottom widget (box44) -->
+            <div class="panel-section notice-sec">
+                <h4>Alert Notice</h4>
+                <p>System upgrades are scheduled for tonight at 2:00 AM UTC. Please save all work.</p>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
