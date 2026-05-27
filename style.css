@@ -1,4 +1,4 @@
-/* Reset & Fonts */
+/* Reset & Basic Setup */
 * {
     margin: 0;
     padding: 0;
@@ -7,12 +7,14 @@
 
 body {
     font-family: 'Outfit', sans-serif;
-    background-color: #f1f5f9;
+    background-color: #f8fafc;
     color: #1e293b;
-    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* 1. Showcase Header (Restructured Portfolio Presentation) */
+/* 1. Showcase Header */
 .showcase-header {
     background: linear-gradient(135deg, #1e1b4b 0%, #311042 100%);
     color: #ffffff;
@@ -104,265 +106,180 @@ body {
 /* 2. Main Page Layout */
 .main-container {
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 50px auto;
     padding: 0 20px;
+    flex: 1;
 }
 
-/* Brand Header */
-.brand-header {
-    background-color: #52357B;
-    padding: 15px 30px;
+/* Directory Card */
+.directory-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+/* Directory Header */
+.directory-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(82, 53, 123, 0.15);
-    margin-bottom: 25px;
+    gap: 20px;
     flex-wrap: wrap;
-    gap: 15px;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
 }
 
-.brand-logo {
+.directory-header h2 {
     font-size: 1.8rem;
     font-weight: 700;
-    color: white;
+    color: #0f172a;
+    margin-bottom: 5px;
     letter-spacing: -0.5px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
 }
 
-.logo-dot {
-    font-size: 1.4rem;
+.directory-header p {
+    font-size: 0.95rem;
+    color: #64748b;
 }
 
-.brand-navbar {
-    display: flex;
-    gap: 25px;
+/* Search Box Container */
+.search-box-container {
+    position: relative;
+    width: 320px;
 }
 
-.nav-item {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 500;
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 1rem;
-    transition: all 0.3s ease;
-    padding: 6px 12px;
-    border-radius: 6px;
+    color: #94a3b8;
 }
 
-.nav-item:hover, .nav-item.active {
-    color: white;
-    background: rgba(255, 255, 255, 0.1);
-}
-
-/* Hero Section */
-.hero-section {
-    background-color: #f8fafc;
+#directorySearch {
+    width: 100%;
+    padding: 12px 16px 12px 42px;
+    font-size: 0.95rem;
+    border-radius: 10px;
     border: 1px solid #e2e8f0;
-    border-radius: 16px;
-    padding: 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
-    margin-bottom: 30px;
+    background-color: #f8fafc;
+    color: #1e293b;
+    outline: none;
+    transition: all 0.3s ease;
 }
 
-.hero-content {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 40px;
-    align-items: center;
+#directorySearch:focus {
+    border-color: #2563eb;
+    background-color: white;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
 }
 
-.hero-text h1 {
-    font-size: 3rem;
+/* Responsive Table */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.student-table th {
+    background-color: #f8fafc;
+    color: #475569;
     font-weight: 700;
-    color: #1e1b4b;
-    line-height: 1.1;
-    margin-bottom: 12px;
+    padding: 16px 20px;
 }
 
-.hero-text h3 {
-    font-size: 1.3rem;
+.student-table td {
+    padding: 18px 20px;
+    color: #334155;
+    background-color: white;
+    transition: background-color 0.2s ease;
+}
+
+/* Table borders */
+.bordered {
+    border: 1px solid #e2e8f0;
+}
+
+.header-group {
+    text-align: center;
+}
+
+.bold-id {
     font-weight: 600;
     color: #6366f1;
-    margin-bottom: 20px;
 }
 
-.hero-text p {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: #64748b;
-    margin-bottom: 30px;
-}
-
-.cta-order-btn {
-    height: 48px;
-    width: 180px;
-    border: none;
-    border-radius: 30px;
-    background-color: #00CAFF;
-    color: #0c4a6e;
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 202, 255, 0.3);
-    transition: all 0.3s ease;
-}
-
-.cta-order-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 202, 255, 0.4);
-    background-color: #38bdf8;
-}
-
-.hero-visual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.visual-card {
-    background: white;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 25px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
-    position: relative;
-    transition: transform 0.3s ease;
-}
-
-.visual-card:hover {
-    transform: translateY(-5px);
-}
-
-.visual-card img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-.visual-badge {
-    position: absolute;
-    top: -10px;
-    right: 10px;
-    background: #52357B;
-    color: white;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.75rem;
+.bold-name {
     font-weight: 600;
+    color: #0f172a;
 }
 
-/* Materials Grid */
-.materials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin-top: 50px;
-}
-
-.material-card {
-    background: white;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 25px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.material-card:hover {
-    transform: translateY(-5px);
-    border-color: #6366f1;
-    box-shadow: 0 12px 24px rgba(99, 102, 241, 0.1);
-}
-
-.card-icon {
-    font-size: 2.2rem;
-    margin-bottom: 12px;
-}
-
-.material-card h4 {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #1e293b;
-    margin-bottom: 8px;
-    letter-spacing: 0.5px;
-}
-
-.material-card p {
-    font-size: 0.85rem;
-    color: #64748b;
-}
-
-/* CTA Section */
-.cta-section {
-    background-color: #FFB433;
-    border-radius: 16px;
-    padding: 40px;
-    text-align: center;
-    color: white;
-    box-shadow: 0 10px 35px rgba(255, 180, 51, 0.25);
-    margin-bottom: 30px;
-}
-
-.cta-content h2 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-    letter-spacing: -0.5px;
-}
-
-.cta-content h4 {
-    font-size: 1.1rem;
-    font-weight: 400;
-    opacity: 0.95;
-    margin-bottom: 25px;
-}
-
-.cta-signup-btn {
-    height: 48px;
-    width: 180px;
-    border: none;
-    border-radius: 30px;
-    background-color: white;
-    color: #d97706;
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.cta-signup-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+/* Table Row Hover */
+.student-table tbody tr:hover td {
     background-color: #f8fafc;
 }
 
-/* Footer */
-.brand-footer {
-    background-color: #0f172a;
-    color: #94a3b8;
-    padding: 30px 20px;
-    text-align: center;
-    border-radius: 12px;
-    font-size: 0.9rem;
+/* Badges pills */
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 
-/* Responsive Grid overrides */
+.badge.yes {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.empty-icon {
+    font-size: 3.5rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.empty-state h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 5px;
+}
+
+.empty-state p {
+    font-size: 0.95rem;
+    color: #64748b;
+}
+
+.hidden {
+    display: none !important;
+}
+
 @media (max-width: 768px) {
-    .hero-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        text-align: center;
+    .directory-header {
+        flex-direction: column;
+        align-items: stretch;
     }
     
-    .hero-text h1 {
-        font-size: 2.2rem;
-    }
-    
-    .brand-header {
-        justify-content: center;
+    .search-box-container {
+        width: 100%;
     }
 }
